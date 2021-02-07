@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape android:shape="rectangle"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<!--    스트로크 -> 테두리라는 뜻-->
+    <stroke android:width="3dp" android:color="#000000"/>
+
+<!--    솔리드 -> 면을 그리는, 면을 의미-->
+    <solid android:color="#78D2BE"/>
+<!--    corners -> radius 둥글게-->
+    <corners android:radius="20dp" />
+
+</shape>

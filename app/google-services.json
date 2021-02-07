@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "978588673024",
+    "project_id": "kenshimarket",
+    "storage_bucket": "kenshimarket.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:978588673024:android:879c3cee2ed0bd6fbd24e5",
+        "android_client_info": {
+          "package_name": "kr.ac.konkuk.marketapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "978588673024-shqoom2rae7tsjvass479319gauo89ku.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "kr.ac.konkuk.marketapp",
+            "certificate_hash": "c7ef690eac5a3cef2b30aa9e0005a6fda15c9116"
+          }
+        },
+        {
+          "client_id": "978588673024-ka0rgsf5509b9akbe2r550g9g0hfs0gl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBI0hTZpVtmAwbUjigTo6Yw9dH1eCOMNgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "978588673024-ka0rgsf5509b9akbe2r550g9g0hfs0gl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
