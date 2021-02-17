@@ -15,5 +15,4 @@ public class CustomApplication extends MultiDexApplication
         instance = this;
     }
 
-
 }

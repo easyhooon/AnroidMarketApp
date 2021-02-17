@@ -21,7 +21,7 @@ import com.google.android.gms.ads.AdRequest;
 import com.google.android.gms.ads.FullScreenContentCallback;
 import com.google.android.gms.ads.OnPaidEventListener;
 import com.google.android.gms.ads.ResponseInfo;
-import com.google.android.gms.ads.interstitial.InterstitialAd;
+import com.google.android.gms.ads.InterstitialAd;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -45,7 +45,6 @@ public class FragSales extends Fragment
 
     private Button btn_add; //item 추가 버튼
 
-
     private InterstitialAd mInterstitialAd; // 애드몹 전면광고 객체
 
     public static FragSales newInstance( )
@@ -61,10 +60,10 @@ public class FragSales extends Fragment
     { //프래그먼트 시작 시 수행하는 생명 주기
         view = inflater.inflate(R.layout.frag_sales, container, false);
 
-//        mInterstitialAd = new InterstitialAd(getContext()); //액티비티이면 this , fragment일 경우 getContext()
-//        mInterstitialAd.setAdUnitId("ca-app-pub-3940256099942544/1033173712");
-//
-//        mInterstitialAd.loadAd(new AdRequest.Builder().build()); //로드
+        mInterstitialAd = new InterstitialAd(getContext()); //액티비티이면 this , fragment일 경우 getContext()
+        mInterstitialAd.setAdUnitId("ca-app-pub-5570932833347277/1853320725");
+
+        mInterstitialAd.loadAd(new AdRequest.Builder().build()); //로드
 
         btn_add = view.findViewById(R.id.btn_add);//아이템 추가버튼
 
@@ -74,6 +73,8 @@ public class FragSales extends Fragment
 
         databaseReference = FirebaseDatabase.getInstance().getReference("SalesItem"); // 파이어베이스 데이터베이스 연동
         //path 이름이 동일해야만 가져올 수 있다.
+
+
 
         recyclerView.setLayoutManager(layoutManager);
         arrayList = new ArrayList<>(); //판매목록을 담아주려는 빈 배열 리스트 생성
@@ -131,11 +132,11 @@ public class FragSales extends Fragment
             public void onClick(View v)
             {
 //                전면광고 로직
-//                if (mInterstitialAd.isLoaded()) {
-//                    mInterstitialAd.show();
-//                } else {
-//                    Log.d("TAG", "The interstitial wasn't loaded yet.");
-//                }
+                if (mInterstitialAd.isLoaded()) {
+                    mInterstitialAd.show();
+                } else {
+                    Log.d("TAG", "The interstitial wasn't loaded yet.");
+                }
 
                 final Dialog dialogAdd = new Dialog(getContext(), R.style.Theme_AppCompat_Light_Dialog_Alert);
                 dialogAdd.setContentView(R.layout.dialog_add); // xml 레이아웃 연결
